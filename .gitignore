@@ -1,0 +1,6 @@
+node_modules/
+
+# Keep local missing-person records and uploaded images out of version control.
+data/people.json
+uploads/*
+!uploads/.gitkeep
