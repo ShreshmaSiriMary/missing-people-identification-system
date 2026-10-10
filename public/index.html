@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missing Person Identification Prototype</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Prototype</p>
+          <h1>Missing Person Identification System</h1>
+          <p>
+            Upload a facial image and compare it with a small database of registered missing individuals.
+            This prototype shows the core workflow for image intake, preprocessing, feature-based matching, and result display.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Upload & Analyze</h2>
+          <p>Choose an image to simulate a quick identification check.</p>
+        </div>
+
+        <form id="upload-form" enctype="multipart/form-data">
+          <label class="upload-box" for="photo">
+            <span>Choose a photo</span>
+            <input id="photo" name="photo" type="file" accept="image/*" required />
+          </label>
+          <button type="submit">Identify</button>
+        </form>
+
+        <div id="selected-file" class="selected-file">No file selected</div>
+        <div id="status" class="status">Waiting for an upload...</div>
+
+        <div id="result-card" class="result-card hidden">
+          <h2>Best Match</h2>
+          <div id="result-content"></div>
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <article class="info-card">
+          <h3>How it works</h3>
+          <ul>
+            <li>Receive an uploaded image</li>
+            <li>Generate a compact signature from the file content</li>
+            <li>Compare it with stored missing-person records</li>
+            <li>Return the closest match with a confidence score</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Technology stack</h3>
+          <ul>
+            <li>Node.js + Express for the web app</li>
+            <li>HTML, CSS, and JavaScript for the interface</li>
+            <li>Computer vision concepts for future expansion</li>
+            <li>MySQL and deep-learning workflows planned for production</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="records">
+        <h2>Sample Missing Persons</h2>
+        <div class="card-grid">
+          <article class="record-card">
+            <h3>Amina Yusuf</h3>
+            <p>Age: 19</p>
+            <p>Last seen: Lagos market</p>
+            <p>Region: Lagos</p>
+          </article>
+          <article class="record-card">
+            <h3>Daniel Okafor</h3>
+            <p>Age: 24</p>
+            <p>Last seen: Mile 12 bus stop</p>
+            <p>Region: Abuja</p>
+          </article>
+          <article class="record-card">
+            <h3>Sadiq Musa</h3>
+            <p>Age: 16</p>
+            <p>Last seen: Kano school gate</p>
+            <p>Region: Kano</p>
+          </article>
+          <article class="record-card">
+            <h3>Grace Ibe</h3>
+            <p>Age: 27</p>
+            <p>Last seen: Enugu train station</p>
+            <p>Region: Enugu</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

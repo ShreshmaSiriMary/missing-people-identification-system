@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Missing Persons</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Records Panel</p>
+          <h1>Manage Missing Person Records</h1>
+          <p>Add or review person records stored in the prototype database.</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <form id="person-form" class="stacked-form">
+          <input id="name" name="name" placeholder="Full name" required />
+          <input id="age" name="age" type="number" min="1" placeholder="Age" required />
+          <input id="lastSeen" name="lastSeen" placeholder="Last seen location" required />
+          <input id="region" name="region" placeholder="Region" required />
+          <textarea id="description" name="description" placeholder="Physical description" required></textarea>
+          <button type="submit">Save Record</button>
+        </form>
+        <div id="record-status" class="status">Ready to add a record.</div>
+      </section>
+
+      <section class="records">
+        <h2>Current Records</h2>
+        <div id="records-list" class="card-grid"></div>
+      </section>
+    </main>
+
+    <script src="/records.js"></script>
+  </body>
+</html>
